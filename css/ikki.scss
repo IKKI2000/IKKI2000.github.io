@@ -1,0 +1,442 @@
+@charset "UTF-8";
+/* CSS for IKKI Studio | Written by IKKI | 2018-02-03 */
+
+// Sass ------------------------------ */
+$aside-nav-width: 200px;
+$header-height: 60px;
+$header-bg-color: #fff;
+$section-bg-color: #eee;
+$footer-txt-color: #999;
+$mask-bg: rgba(0, 0, 0, .3);
+$line-color: #ccc;
+$hover-border: 3px solid transparent;
+$font-size-s: 12px;
+$font-size-m: 14px;
+$font-size-l: 16px;
+$font-size-xl: 18px;
+$font-size-xxl: 20px;
+$border-radius: 4px;
+$border-radius-round: 50%;
+
+@mixin nav-menu-ani {
+    transition: all .3s;
+}
+
+@mixin nav-menu-dom {
+    border: none;
+    white-space: nowrap;
+    text-decoration: none;
+    color: inherit;
+    background: transparent;
+    box-shadow: none;
+}
+
+@mixin nav-menu-bg-dark {
+    background-color: rgba(0, 0, 0, .08);
+}
+
+@mixin nav-menu-bg-light {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+@mixin nav-menu-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@mixin nav-menu-icon-s {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+@mixin badge-dot {
+    position: absolute;
+    border-radius: $border-radius-round;
+    width: 10px;
+    height: 10px;
+    text-indent: -9999px;
+    background: #ff8300;
+}
+
+@mixin nav-menu-img {
+    margin: 0 2px 0 10px;
+    border-radius: $border-radius-round;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, .6);
+}
+
+@mixin css-arrow {
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    width: 0;
+    height: 0;
+    content: "";
+}
+
+/* 主体框架结构 ------------------------------ */
+html,
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft YaHei", arial, simsun, sans-serif;
+    font-size: $font-size-m;
+}
+
+#aside {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: -$aside-nav-width;
+    z-index: 9999;
+    width: $aside-nav-width;
+    height: 100%;
+    @include nav-menu-ani;
+}
+
+#main {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    @include nav-menu-ani;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    height: $header-height;
+    background: $header-bg-color;
+}
+
+#section {
+    overflow: auto;
+    position: absolute;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: calc(100% - #{$header-height});
+    background: $section-bg-color;
+}
+
+#container {
+    position: relative;
+    min-height: 96%;
+}
+
+#banner {
+    height: 500px;
+}
+
+#footer {
+    height: 4%;
+    font-size: $font-size-s;
+    line-height: $font-size-s;
+    text-align: center;
+    color: $footer-txt-color;
+    background: $section-bg-color;
+    text-shadow: 1px 1px 0 $header-bg-color;
+}
+
+h1 {
+    margin: 0;
+    width: 100%;
+    height: $header-height;
+    text-indent: -9999px;
+    background: $header-bg-color url("../img/logo.png") no-repeat center;
+    background-size: auto 72%;
+    box-shadow: -2px 1px 2px rgba(0, 0, 0, .2);
+}
+
+/* 左侧导航 */
+#nav {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: $aside-nav-width + 20px;
+    height: calc(100% - #{$header-height});
+    small {
+        display: inline-block;
+        margin-left: 5px;
+        font-family: tahoma, sans-serif;
+        font-size: 11px;
+        opacity: .5;
+        -webkit-transform: scale(0.916);
+        -moz-transform: none;
+        -ms-transform: none;
+    }
+    i {
+        @include nav-menu-icon;
+        margin-right: 10px;
+    }
+    sup {
+        display: none;
+        top: 8px;
+        left: 8px;
+        @include badge-dot;
+    }
+    sub {
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        border-radius: $border-radius;
+        padding: 2px 5px;
+        height: 16px;
+        font-family: "Microsoft YaHei", tahoma, sans-serif;
+        font-size: $font-size-s;
+        line-height: $font-size-s;
+    }
+    img {
+        @include nav-menu-img;
+    }
+    .k-group {
+        i {
+            @include nav-menu-icon-s;
+            margin-right: 6px;
+        }
+        sub {
+            position: relative;
+            top: 0;
+            left: 5px;
+        }
+    }
+}
+
+#navPanelBar {
+    width: $aside-nav-width;
+    &,
+    .k-item,
+    .k-link,
+    .k-icon {
+        @include nav-menu-dom;
+    }
+    .k-link {
+        padding: 12px 0 12px 12px;
+        cursor: pointer;
+    }
+    .k-group {
+        @include nav-menu-dom;
+        @include nav-menu-bg-light;
+        .k-link {
+            padding: 8px 0 8px 30px;
+            font-size: $font-size-s;
+        }
+    }
+    .k-state-hover {
+        @include nav-menu-bg-light;
+    }
+    .k-state-active > .k-link,
+    .k-state-selected {
+        @include nav-menu-bg-dark;
+    }
+    .hr {
+        display: none;
+    }
+}
+
+/* 左侧导航动效 */
+#navCkb {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &:checked {
+        ~ label {
+            #mask {
+                z-index: 9998;
+                opacity: 1;
+            }
+        }
+        ~ #aside {
+            left: 0;
+            h1 {
+                background-size: 80% auto;
+            }
+        }
+        ~ #main {
+            #header {
+                .fa-bars {
+                    margin-left: $aside-nav-width + 15px;
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+}
+
+#mask {
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - #{$header-height});
+    background: $mask-bg;
+    opacity: 0;
+    @include nav-menu-ani;
+}
+
+/* 顶部菜单 */
+#header {
+    label {
+        display: none;
+        float: left;
+        margin-bottom: 0;
+        i {
+            margin: 15px;
+            font-size: 30px;
+            cursor: pointer;
+            @include nav-menu-ani;
+        }
+    }
+    h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: $aside-nav-width;
+        box-shadow: none;
+    }
+}
+
+#menuH {
+    float: right;
+    @include nav-menu-dom;
+    .k-item,
+    .k-link {
+        @include nav-menu-dom;
+        color: #000;
+    }
+    hr {
+        border-top: none;
+        border-left: 1px solid $line-color;
+        width: 0;
+        height: 20px;
+    }
+    sup {
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        border-radius: $border-radius-round;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        transform: scale(0.8);
+    }
+    sub {
+        display: none;
+    }
+    i {
+        @include nav-menu-icon;
+        margin-right: 6px;
+    }
+    .k-group {
+        i {
+            @include nav-menu-icon-s;
+        }
+        .k-link {
+            border-left: $hover-border;
+            padding: 8px 30px 8px 20px;
+            font-size: $font-size-s;
+        }
+        .k-state-hover > .k-link,
+        .k-state-active {
+            @include nav-menu-bg-dark;
+            border-color: #1890ff;
+        }
+    }
+    > .k-item {
+        > .k-link {
+            border-top: $hover-border;
+            padding: 7px 10px 10px 10px;
+            height: $header-height;
+            line-height: $header-height;
+            img {
+                @include nav-menu-img;
+            }
+        }
+        > span.k-link {
+            border-color: transparent !important;
+            cursor: default;
+        }
+        > span.k-state-active {
+            border-color: #1890ff !important;
+            cursor: pointer;
+        }
+        > .k-animation-container {
+            left: auto !important;
+            right: 0;
+            > .k-group {
+                overflow: visible !important;
+                &:before {
+                    @include css-arrow;
+                    top: -16px;
+                    right: 47px;
+                    z-index: 999;
+                    border-width: 8px;
+                    border-bottom-color: #f9f9f9;
+
+                }
+                &:after {
+                    @include css-arrow;
+                    top: -20px;
+                    right: 45px;
+                    z-index: 888;
+                    border-width: 10px;
+                    border-bottom-color: $line-color;
+                }
+            }
+        }
+    }
+    .k-state-hover > .k-link,
+    .k-item > .k-state-active {
+        border-color: #1890ff !important;
+    }
+}
+
+/* 手机端适配 */
+@media only screen and (max-width: 767px) {
+    #header {
+        padding: 0;
+        label {
+            display: block;
+        }
+        h1 {
+            width: 100%;
+        }
+    }
+
+    #navCkb:checked ~ #main #header h1,
+    #menuH {
+        display: none;
+    }
+
+    #banner {
+        height: 200px;
+    }
+}

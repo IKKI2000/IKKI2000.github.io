@@ -1,0 +1,25 @@
+{
+    "result": "y",
+    "data": [
+        {
+            "text": "<i class='fas fa-cog'></i>Kendo UI Admin",
+            "encoded": false,
+            "url": "javascript:;"
+        },
+        {
+            "text": "<i class='fas fa-globe'></i>Kendo UI Site",
+            "encoded": false,
+            "url": "javascript:;"
+        },
+        {
+            "text": "<hr>",
+            "encoded": false,
+            "cssClass": "hr"
+        },
+        {
+            "text": "<i class='fab fa-github'></i>Github",
+            "encoded": false,
+            "url": "https://ikki2000.github.io/"
+        }
+    ]
+}
