@@ -19,3 +19,12 @@ $(function() {
         }
     });
 });
+
+// 百度统计
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?19f119dc89e5fbc1a5a63448c2544768";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
