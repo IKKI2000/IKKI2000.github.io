@@ -39,6 +39,12 @@ $border-radius-round: 50%;
     background-color: rgba(255, 255, 255, .2);
 }
 
+@mixin nav-menu-small {
+    margin-left: 5px;
+    font-size: 11px;
+    opacity: .5;
+}
+
 @mixin nav-menu-icon {
     display: inline-block;
     width: 20px;
@@ -176,11 +182,9 @@ h1 {
     width: $aside-nav-width + 20px;
     height: calc(100% - #{$header-height});
     small {
+        @include nav-menu-small;
         display: inline-block;
-        margin-left: 5px;
         font-family: tahoma, sans-serif;
-        font-size: 11px;
-        opacity: .5;
         -webkit-transform: scale(0.916);
         -moz-transform: none;
         -ms-transform: none;
@@ -352,9 +356,7 @@ h1 {
         display: none;
     }
     small {
-        margin-left: 5px;
-        font-size: 11px;
-        opacity: .5;
+        @include nav-menu-small;
     }
     i {
         @include nav-menu-icon;
