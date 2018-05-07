@@ -4,34 +4,35 @@
         {
             "text": "<i class='fas fa-cog'></i>Kendo UI Admin",
             "encoded": false,
+            "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/login.html",
             "items": [
                 {
-                    "text": "<i class='fas fa-genderless'></i>Â·ÓÉ°æ<small>Router Edition</small>",
+                    "text": "<i class='fas fa-genderless'></i>è·¯ç”±ç‰ˆ<small>Router Edition</small>",
                     "encoded": false,
                     "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_router.html"
                 },
                 {
-                    "text": "<i class='fas fa-genderless'></i>¿ò¼Ü°æ<small>iFrame Edition</small>",
+                    "text": "<i class='fas fa-genderless'></i>æ¡†æž¶ç‰ˆ<small>iFrame Edition</small>",
                     "encoded": false,
                     "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_iframe.html"
                 },
                 {
-                    "text": "<i class='fas fa-genderless'></i>±êÇ©°æ<small>Tabstrip Edition</small>",
+                    "text": "<i class='fas fa-genderless'></i>æ ‡ç­¾ç‰ˆ<small>Tabstrip Edition</small>",
                     "encoded": false,
                     "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_tabstrip.html"
                 },
                 {
-                    "text": "<i class='fas fa-genderless'></i>²¼¾ÖÂ·ÓÉ°æ<small>Splitter Router Edition</small>",
+                    "text": "<i class='fas fa-genderless'></i>å¸ƒå±€è·¯ç”±ç‰ˆ<small>Splitter Router Edition</small>",
                     "encoded": false,
                     "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_splitter_router.html"
                 },
                 {
-                    "text": "<i class='fas fa-genderless'></i>²¼¾Ö¿ò¼Ü°æ<small>Splitter iFrame Edition</small>",
+                    "text": "<i class='fas fa-genderless'></i>å¸ƒå±€æ¡†æž¶ç‰ˆ<small>Splitter iFrame Edition</small>",
                     "encoded": false,
                     "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_splitter_iframe.html"
                 },
                 {
-                    "text": "<i class='fas fa-genderless'></i>²¼¾Ö±êÇ©°æ<small>Splitter Tabstrip Edition</small>",
+                    "text": "<i class='fas fa-genderless'></i>å¸ƒå±€æ ‡ç­¾ç‰ˆ<small>Splitter Tabstrip Edition</small>",
                     "encoded": false,
                     "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_splitter_tabstrip.html"
                 }
