@@ -351,6 +351,11 @@ h1 {
     sub {
         display: none;
     }
+    small {
+        margin-left: 5px;
+        font-size: 11px;
+        opacity: .5;
+    }
     i {
         @include nav-menu-icon;
         margin-right: 6px;

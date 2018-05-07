@@ -4,12 +4,43 @@
         {
             "text": "<i class='fas fa-cog'></i>Kendo UI Admin",
             "encoded": false,
-            "url": "javascript:;"
+            "items": [
+                {
+                    "text": "<i class='fas fa-genderless'></i>路由版<small>Router Edition</small>",
+                    "encoded": false,
+                    "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_router.html"
+                },
+                {
+                    "text": "<i class='fas fa-genderless'></i>框架版<small>iFrame Edition</small>",
+                    "encoded": false,
+                    "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_iframe.html"
+                },
+                {
+                    "text": "<i class='fas fa-genderless'></i>标签版<small>Tabstrip Edition</small>",
+                    "encoded": false,
+                    "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_tabstrip.html"
+                },
+                {
+                    "text": "<i class='fas fa-genderless'></i>布局路由版<small>Splitter Router Edition</small>",
+                    "encoded": false,
+                    "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_splitter_router.html"
+                },
+                {
+                    "text": "<i class='fas fa-genderless'></i>布局框架版<small>Splitter iFrame Edition</small>",
+                    "encoded": false,
+                    "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_splitter_iframe.html"
+                },
+                {
+                    "text": "<i class='fas fa-genderless'></i>布局标签版<small>Splitter Tabstrip Edition</small>",
+                    "encoded": false,
+                    "url": "https://ikki2000.github.io/KendoUI-Admin-Site/admin/index_splitter_tabstrip.html"
+                }
+            ]
         },
         {
             "text": "<i class='fas fa-globe'></i>Kendo UI Site",
             "encoded": false,
-            "url": "javascript:;"
+            "url": "https://ikki2000.github.io/KendoUI-Admin-Site/site/index.html"
         },
         {
             "text": "<hr>",

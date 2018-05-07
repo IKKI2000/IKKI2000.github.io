@@ -257,6 +257,10 @@ h1 {
     transform: scale(0.8); }
   #menuH sub {
     display: none; }
+  #menuH small {
+    margin-left: 5px;
+    font-size: 11px;
+    opacity: .5; }
   #menuH i {
     display: inline-block;
     width: 20px;
