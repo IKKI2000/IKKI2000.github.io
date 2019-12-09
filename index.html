@@ -47,56 +47,6 @@
                     <div class="container mt-4 pb-3">
                         <div class="card-deck">
                             <div class="card">
-                                <div class="card-header text-nowrap"><img class="mr-2" src="https://github.com/fluidicon.png" alt="GitHub">Github Repo <small class="text-muted">(Created at <time id="githubCreate"></time>)</small></div>
-                                <div class="card-body text-center">
-                                    <p class="card-text">Kendo UI Admin & Site base on<br>Kendo UI for jQuery and Bootstrap 4.</p>
-                                    <p class="card-text">
-                                        <small class="text-muted">🌸 Updated at <time id="githubUpdate"></time></small><br>
-                                        <a href="https://github.com/IKKI2000/KendoUI-Admin-Site/releases" target="_blank"><img src="https://img.shields.io/github/release/IKKI2000/KendoUI-Admin-Site.svg" alt="GitHub Release"></a>
-                                    </p>
-                                    <div class="btn-group btn-group-sm">
-                                        <a class="btn border bg-light text-dark" href="https://github.com/IKKI2000/KendoUI-Admin-Site"><i class='fas fa-star mr-1'></i>Star</a>
-                                        <a class="btn border bg-white text-dark" href="https://github.com/IKKI2000/KendoUI-Admin-Site/stargazers"><span id="githubStar"></span></a>
-                                    </div>
-                                    <div class="btn-group btn-group-sm">
-                                        <a class="btn border bg-light text-dark" href="https://github.com/IKKI2000/KendoUI-Admin-Site"><i class='fas fa-code-branch mr-1'></i>Fork</a>
-                                        <a class="btn border bg-white text-dark" href="https://github.com/IKKI2000/KendoUI-Admin-Site/network/members"><span id="githubFork"></span></a>
-                                    </div>
-                                    <div class="btn-group btn-group-sm">
-                                        <a class="btn border bg-light text-dark" href="https://github.com/IKKI2000/KendoUI-Admin-Site"><i class='fas fa-eye mr-1'></i>Watch</a>
-                                        <a class="btn border bg-white text-dark" href="https://github.com/IKKI2000/KendoUI-Admin-Site/watchers"><span id="githubWatch"></span></a>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <a href="https://ikki2000.github.io/KendoUI-Admin-Site/admin/login.html" class="btn btn-primary">View Demo</a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header text-nowrap"><img class="mr-2" src="https://gitee.com/logo_themecolor.png" alt="码云">码云仓库<small class="text-muted">（创建于<time id="giteeCreate"></time>）</small></div>
-                                <div class="card-body text-center">
-                                    <p class="card-text">基于 Kendo UI for jQuery 和 Bootstrap 4<br>搭建的前台网站和后台管理框架。</p>
-                                    <p class="card-text">
-                                        <small class="text-muted">🌌 更新于 <time id="giteeUpdate"></time></small><br>
-                                        <a href="https://github.com/IKKI2000/KendoUI-Admin-Site/archive/master.zip" target="_blank"><img src="https://img.shields.io/github/repo-size/IKKI2000/KendoUI-Admin-Site.svg" alt="GitHub Repo Size"></a>
-                                    </p>
-                                    <div class="btn-group btn-group-sm">
-                                        <a class="btn border bg-light text-dark" href="https://gitee.com/IKKI2000/KendoUI-Admin-Site"><i class='fas fa-star mr-1'></i>Star</a>
-                                        <a class="btn border bg-white text-dark" href="https://gitee.com/IKKI2000/KendoUI-Admin-Site/stargazers"><span id="giteeStar"></span></a>
-                                    </div>
-                                    <div class="btn-group btn-group-sm">
-                                        <a class="btn border bg-light text-dark" href="https://gitee.com/IKKI2000/KendoUI-Admin-Site"><i class='fas fa-code-branch mr-1'></i>Fork</a>
-                                        <a class="btn border bg-white text-dark" href="https://gitee.com/IKKI2000/KendoUI-Admin-Site/members"><span id="giteeFork"></span></a>
-                                    </div>
-                                    <div class="btn-group btn-group-sm">
-                                        <a class="btn border bg-light text-dark" href="https://gitee.com/IKKI2000/KendoUI-Admin-Site"><i class='fas fa-eye mr-1'></i>Watch</a>
-                                        <a class="btn border bg-white text-dark" href="https://gitee.com/IKKI2000/KendoUI-Admin-Site/watchers"><span id="giteeWatch"></span></a>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <a href="https://ikki2000.gitee.io/kendoui-admin-site/admin/login.html" class="btn btn-primary">查看演示</a>
-                                </div>
-                            </div>
-                            <div class="card">
                                 <div class="card-header"><i class='fas fa-spinner mr-3'></i>Coming soon...</div>
                                 <div class="card-body text-center">
                                     <p class="card-text">敬请期待……</p>
@@ -116,39 +66,9 @@
             $(function() {
                 // 动态背景
                 $('#banner').particleground();
-                // Github 统计数据获取
-                $.ajax({
-                    type: 'get',
-                    url: 'https://api.github.com/repos/IKKI2000/KendoUI-Admin-Site',
-                    dataType: 'json',
-                    success: function(res) {
-                        $('#githubCreate').text(kendo.toString(kendo.parseDate(res.created_at), 'yyyy-MM-dd'));
-                        $('#githubUpdate').text(kendo.toString(kendo.parseDate(res.updated_at), 'yyyy-MM-dd HH:mm:ss'));
-                        $('#githubStar').text(res.stargazers_count);
-                        $('#githubFork').text(res.forks_count);
-                        $('#githubWatch').text(res.subscribers_count);
-                    }
-                });
-                // 码云统计数据获取
-                $.ajax({
-                    type: 'get',
-                    url: 'https://gitee.com/api/v5/repos/IKKI2000/KendoUI-Admin-Site',
-                    dataType: 'json',
-                    success: function(res) {
-                        $('#giteeCreate').text(kendo.toString(kendo.parseDate(res.created_at), 'yyyy年MM月dd日'));
-                        $('#giteeUpdate').text(kendo.toString(kendo.parseDate(res.updated_at), 'yyyy年MM月dd日 HH时mm分ss秒'));
-                        $('#giteeStar').text(res.stargazers_count);
-                        $('#giteeFork').text(res.forks_count);
-                        $('#giteeWatch').text(res.watchers_count);
-                    }
-                });
             });
         </script>
         <style scoped>
-            .card-header img {
-                width: 24px;
-                height: 24px;
-            }
         </style>
     </body>
 </html>
